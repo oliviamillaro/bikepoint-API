@@ -25,5 +25,9 @@ s3_client = boto3.client(
 #first variable of s3_client.upload_file is where the file is locally, second is bucket, third is rename it when it gets to S3
 for file in file_location:
     to_upload = f'{data_dir}/{file}'
-    s3_client.upload_file(to_upload, AWS_BUCKET_NAME, file)
-    os.remove(to_upload)
+    try:
+        s3_client.upload_file(to_upload, AWS_BUCKET_NAME, file)
+        print(f'File {file} successfully uploaded!')
+        os.remove(to_upload)
+    except Exception as e:
+        print(f'Something went wrong. Error: {e}')
