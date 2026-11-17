@@ -10,9 +10,6 @@ AWS_ACCESS_KEY=os.getenv('AWS_ACCESS_KEY')
 AWS_SECRET_ACCESS_KEY=os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_BUCKET_NAME=os.getenv('AWS_BUCKET_NAME')
 
-#test_file = '2026-11-11 15-30-18.json'
-#file_location = 'data/2026-11-11 15-30-18.json'
-
 data_dir = 'data'
 file_location = os.listdir(data_dir)
 
