@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v7
+        with:
+          ref: main
 
       - name: Setup Python
         uses: actions/setup-python@v7
